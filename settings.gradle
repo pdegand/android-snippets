@@ -1,0 +1,3 @@
+include ':android-snippets-sample', ':android-snippets'
+
+rootProject.name = 'android-snippets-root'

@@ -1,0 +1,33 @@
+buildscript {
+    dependencies {
+        classpath rootProject.ext.androidPlugin
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "fr.pdegand.android.snippets.sample"
+        minSdkVersion 8
+        targetSdkVersion 21
+
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+        }
+    }
+}
+
+dependencies {
+    // Android
+    compile rootProject.ext.appcompatV7
+
+    compile project(':android-snippets')
+}
