@@ -1,6 +1,5 @@
 package fr.pdegand.android.snippets;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
