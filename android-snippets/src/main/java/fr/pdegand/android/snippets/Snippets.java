@@ -1,5 +1,6 @@
 package fr.pdegand.android.snippets;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
@@ -22,20 +23,19 @@ import java.util.concurrent.atomic.AtomicInteger;
 @SuppressWarnings("deprecation")
 public class Snippets {
 
-    private static AtomicInteger sNextGeneratedId = new AtomicInteger(1);
-
     private Snippets() {
     }
 
     /**
-     * Get the screen size in pixels
+     * Get the screen size in pixels.
+     * <p/>
+     * Useful if minSdk < 13
      *
      * @param context a non-null context
      * @return a Point with x as the width and y as the height
      */
     public static Point getScreenSize(@NonNull final Context context) {
         Point p = new Point();
-
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         final Display display = wm.getDefaultDisplay();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
@@ -68,6 +68,8 @@ public class Snippets {
 
     /**
      * Remove a ViewTreeObserver.OnGlobalLayoutListener attached to the ViewTreeObserver of a View
+     * <p/>
+     * Useful if minSdk < 16
      *
      * @param view   a non-null view on wich the listener should be removed
      * @param victim the listener to remove
@@ -83,6 +85,8 @@ public class Snippets {
 
     /**
      * Set the background of a View
+     * <p/>
+     * Useful if minSdk < 16
      *
      * @param view     a non-null View on wich the background will be applied
      * @param drawable the Drawable to be set as background or null to remove background
@@ -95,11 +99,15 @@ public class Snippets {
         }
     }
 
+    private static AtomicInteger sNextGeneratedId = new AtomicInteger(1);
+
     /**
      * Generate a value suitable for use in android.view.View.setId(int).
      * This value will not collide with ID values generated at build time by aapt for R.id.
      * <p/>
      * This is the code snippet directly from Android API v17.
+     * <p/>
+     * Useful if minSdk < 17
      *
      * @return a generated ID value
      */
