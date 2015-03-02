@@ -73,7 +73,7 @@ public class Snippets {
      * @param view   a non-null view on wich the listener should be removed
      * @param victim the listener to remove
      */
-    public static void removeOnGlobalLayoutListener(@NonNull final View view, ViewTreeObserver.OnGlobalLayoutListener victim) {
+    public static void removeOnGlobalLayoutListener(@NonNull final View view, final ViewTreeObserver.OnGlobalLayoutListener victim) {
         final ViewTreeObserver viewTreeObserver = view.getViewTreeObserver();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             viewTreeObserver.removeOnGlobalLayoutListener(victim);
