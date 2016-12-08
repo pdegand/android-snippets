@@ -13,10 +13,10 @@ subprojects {
 }
 
 ext {
-    androidPlugin = 'com.android.tools.build:gradle:1.1.0'
-    compileSdkVersion = 21
-    buildToolsVersion = '21.1.2'
+    androidPlugin = 'com.android.tools.build:gradle:2.2.2'
+    compileSdkVersion = 24
+    buildToolsVersion = '25.0.1'
 
     // Android
-    appcompatV7 = 'com.android.support:appcompat-v7:21.0.3'
+    appcompatV7 = 'com.android.support:appcompat-v7:25.0.1'
 }
