@@ -20,9 +20,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  * when running on older platform.
  */
 @SuppressWarnings("deprecation")
-public class Snippets {
+public class CompatSnippets {
 
-    private Snippets() {
+    private CompatSnippets() {
     }
 
     /**
